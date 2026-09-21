@@ -11,7 +11,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-[90vh] md:h-[75vh] lg:h-[90vh] min-h-[600px] w-full flex items-center pt-28 md:pt-16 lg:pt-64">
+    <section id="home" className="relative min-h-[90vh] lg:min-h-screen w-full flex items-center pt-28 pb-16">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -32,19 +32,19 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-2xl"
         >
-          <span className="inline-block text-sm md:text-xs font-semibold tracking-widest uppercase mb-4 text-brand-caramel">
+          <span className="inline-block text-xs md:text-sm font-semibold tracking-widest uppercase mb-4 text-brand-caramel">
             Your Local Brunch Destination
           </span>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-tight mb-6">
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
             Good food.<br />
             Great coffee.<br />
             Good mornings.
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-lg font-light leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 mb-8 max-w-lg font-light leading-relaxed">
             Your neighbourhood cafe serving fresh breakfast, brunch, great coffee and local favourites.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-8 lg:mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <button
               onClick={() => scrollTo("menu")}
               className="px-8 py-4 bg-brand-olive hover:bg-brand-dark transition-colors duration-300 text-white font-medium tracking-wide"
@@ -59,7 +59,7 @@ export default function Hero() {
             </button>
           </div>
 
-          <div className="flex items-center gap-3 mt-16 md:mt-4 lg:mt-12">
+          <div className="flex items-center gap-3 mt-8">
             <div className="flex text-yellow-400">
               {/* 5 Stars */}
               {[...Array(5)].map((_, i) => (

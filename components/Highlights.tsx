@@ -28,7 +28,7 @@ const highlights = [
 
 export default function Highlights() {
   return (
-    <section className="bg-brand-dark text-brand-white pt-16 pb-8 md:py-14 lg:pt-56">
+    <section className="bg-brand-dark text-brand-white py-12 md:py-16">
       <div className="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
           {highlights.map((item, index) => (

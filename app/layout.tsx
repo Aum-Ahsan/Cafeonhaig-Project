@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
+import PreventZoom from "@/components/PreventZoom";
 import "./globals.css";
 
 const playfair = Playfair_Display({ 
@@ -11,6 +12,13 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export const metadata: Metadata = {
   title: "Cafe on Haig | Breakfast, Brunch & Coffee in Georges Hall",
@@ -37,6 +45,7 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} font-sans bg-brand-bg text-brand-dark antialiased`}
       >
+        <PreventZoom />
         {children}
       </body>
     </html>
